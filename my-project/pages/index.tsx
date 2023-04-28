@@ -11,6 +11,9 @@ export default function Home() {
 
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
+
+
+
   return (
   
     <div className='bg-black'>
@@ -21,67 +24,72 @@ export default function Home() {
                 <nav className='' >
                   <ul className='flex flex-row text-sm uppercase font-bold  '>
                     <li className=' text-white hover:text-orange-400 p-4'>about</li>
-                    <div className="relative"  onMouseOver={() => setIsOpen(true)} >
+                    <div className="relative"  onMouseOver={() => {setIsOpen(true); setIsOpenCourses(false); setIsOpenMentoring(false);}} >
                      <li className=' text-white hover:text-orange-400  p-4'  >
                       services
                         <img src="/arrow1.png" alt="" className='bg-white rounded-full w-4 h-4 inline ml-2 ' />
                       </li>
                     {isOpen && (
-                      <div className="absolute z-10 mt-2 w-48 bg-[#333333] rounded-md shadow-lg "  onMouseLeave={() => setIsOpen(false)} >
+                      <div className="absolute z-10 mt-2 w-48 bg-[#333333] rounded-md shadow-lg "  onMouseLeave={() => {setIsOpen(false)}} >
                         <a href="#" className="block px-4 py-2 text-sm text-white hover:bg-gray-100">
-                          Option 1
+                          service 1
                         </a>
                         <a href="#" className="block px-4 py-2 text-sm text-white hover:bg-gray-100">
-                          Option 2
+                        service 1
                         </a>
                         <a href="#" className="block px-4 py-2 text-sm text-white hover:bg-gray-100">
-                          Option 3
+                        service 1
                         </a>
                       </div>
                     )}
                   </div>
 
 
-
-                  <div className="relative"  onMouseOver={() => setIsOpenCourses(true)} >
+<div className="">
+<div className="relative"  onMouseOver={() => {setIsOpenCourses(true);   setIsOpenMentoring(false); setIsOpen(false)}}  >
                      <li className=' text-white hover:text-orange-400  p-4' >
                       courses
                       <img src="/arrow1.png" alt="" className='bg-white rounded-full w-4 h-4 inline ml-2 ' /></li>
                     {isOpenCourses && (
-                      <div className="absolute z-10 mt-2 w-48 bg-[#333333] rounded-md shadow-lg" onMouseLeave={() => setIsOpenCourses(false)}>
+                      <div className="absolute z-10 mt-2 w-48 bg-[#333333] rounded-md shadow-lg" onMouseLeave={() => {setIsOpenCourses(false);}}>
                         <a href="#" className="block px-4 py-2 text-sm text-white hover:bg-gray-100">
-                          Option 1
+                        courses 1
                         </a>
                         <a href="#" className="block px-4 py-2 text-sm text-white hover:bg-gray-100">
-                          Option 2
+                        courses 1
                         </a>
                         <a href="#" className="block px-4 py-2 text-sm text-white hover:bg-gray-100">
-                          Option 3
+                        courses 1
                         </a>
                       </div>
                     )}
                   </div>
+</div>
+                  
                    
 
-
-                    <div className="relative"  onMouseOver={() => setIsOpenMentoring(true)} >
+<div className="">
+<div className="relative"   onMouseOver={() => {setIsOpenMentoring(true); setIsOpen(false); setIsOpenCourses(false);}}  >
                      <li className=' text-white hover:text-orange-400  p-4' >
                       mentoring
                       <img src="/arrow1.png" alt="" className='bg-white rounded-full w-4 h-4 inline ml-2 ' /></li>
                     {isOpenMentoring && (
                       <div className="absolute z-10 mt-2 w-48 bg-[#333333] rounded-md shadow-lg" onMouseLeave={() => setIsOpenMentoring(false)}>
                         <a href="#" className="block px-4 py-2 text-sm text-white hover:bg-gray-100">
-                          Option 1
+                        mentoring 1
                         </a>
                         <a href="#" className="block px-4 py-2 text-sm text-white hover:bg-gray-100">
-                          Option 2
+                        mentoring 1
                         </a>
                         <a href="#" className="block px-4 py-2 text-sm text-white hover:bg-gray-100">
-                          Option 3
+                        mentoring 1
                         </a>
                       </div>
                     )}
                   </div>
+
+</div>
+                   
                     <li className=' text-white hover:text-orange-400  p-4'>blog</li>
                     <li className=' text-white hover:text-orange-400  p-4'>contact</li>
                   </ul>
