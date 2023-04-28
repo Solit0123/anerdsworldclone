@@ -21,13 +21,13 @@ export default function Home() {
                 <nav className='' >
                   <ul className='flex flex-row text-sm uppercase font-bold  '>
                     <li className=' text-white hover:text-orange-400 p-4'>about</li>
-                    <div className="relative"  onMouseEnter={() => setIsOpen(!isOpen)}  onMouseLeave={() => setIsOpen(!isOpen)} >
-                     <li className=' text-white hover:text-orange-400  p-4' >
+                    <div className="relative"  onMouseOver={() => setIsOpen(true)} >
+                     <li className=' text-white hover:text-orange-400  p-4'  >
                       services
                         <img src="/arrow1.png" alt="" className='bg-white rounded-full w-4 h-4 inline ml-2 ' />
                       </li>
                     {isOpen && (
-                      <div className="absolute z-10 mt-2 w-48 bg-[#333333] rounded-md shadow-lg">
+                      <div className="absolute z-10 mt-2 w-48 bg-[#333333] rounded-md shadow-lg "  onMouseLeave={() => setIsOpen(false)} >
                         <a href="#" className="block px-4 py-2 text-sm text-white hover:bg-gray-100">
                           Option 1
                         </a>
@@ -43,12 +43,12 @@ export default function Home() {
 
 
 
-                  <div className="relative"  onMouseOver={() => setIsOpenCourses(!isOpenCourses)} onMouseLeave={() => setIsOpenCourses(!isOpenCourses)}>
+                  <div className="relative"  onMouseOver={() => setIsOpenCourses(true)} >
                      <li className=' text-white hover:text-orange-400  p-4' >
                       courses
                       <img src="/arrow1.png" alt="" className='bg-white rounded-full w-4 h-4 inline ml-2 ' /></li>
                     {isOpenCourses && (
-                      <div className="absolute z-10 mt-2 w-48 bg-[#333333] rounded-md shadow-lg">
+                      <div className="absolute z-10 mt-2 w-48 bg-[#333333] rounded-md shadow-lg" onMouseLeave={() => setIsOpenCourses(false)}>
                         <a href="#" className="block px-4 py-2 text-sm text-white hover:bg-gray-100">
                           Option 1
                         </a>
@@ -64,12 +64,12 @@ export default function Home() {
                    
 
 
-                    <div className="relative"  onMouseOver={() => setIsOpenMentoring(!isOpenMentoring)} onMouseLeave={() => setIsOpenMentoring(!isOpenMentoring)}>
+                    <div className="relative"  onMouseOver={() => setIsOpenMentoring(true)} >
                      <li className=' text-white hover:text-orange-400  p-4' >
                       mentoring
                       <img src="/arrow1.png" alt="" className='bg-white rounded-full w-4 h-4 inline ml-2 ' /></li>
                     {isOpenMentoring && (
-                      <div className="absolute z-10 mt-2 w-48 bg-[#333333] rounded-md shadow-lg">
+                      <div className="absolute z-10 mt-2 w-48 bg-[#333333] rounded-md shadow-lg" onMouseLeave={() => setIsOpenMentoring(false)}>
                         <a href="#" className="block px-4 py-2 text-sm text-white hover:bg-gray-100">
                           Option 1
                         </a>
